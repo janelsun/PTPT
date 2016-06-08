@@ -1,1 +1,7 @@
 PTPT website
+MYSQL COMMAND:
+
+CREATE SCHEMA PTPT;
+CREATE USER 'piupiu'@'localhost' IDENTIFIED BY 'PiuPiu2016';
+GRANT ALL PRIVILEGES ON ptpt.* TO 'piupiu'@'localhost';
+FLUSH PRIVILEGES;
