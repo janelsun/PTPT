@@ -1,0 +1,23 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Sign up successful!{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="signup_thanks">
+    <br><br><br><br><br><br><br>
+        <h1>Thank you for signing up with us!</h1>
+        <br>
+        <h1>You can now log in to your account to explore PTPT.</h1>
+        <br><br>
+        <h1><a href="{% url 'login' %}"><img src="{% static 'web/images/login_btn.png' %}"></a> </h1>
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

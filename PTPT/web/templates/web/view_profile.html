@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}View my profile{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="view_profile">
+    <br><br>
+        {% if profile %}
+            <a href="{% url 'profile' %}"><img class="back_btn" src="{% static 'web/images/back_btn.png' %}"></a><br>
+        <h1>My profile</h1>
+        <br>
+            <table>
+            <tr>
+                <td width="30%"><img src="{{ profile.profile_pic.url}}" width="200px" height="200px"></td>
+                <td>
+                    <ul>
+                        <li>Username: {{ profile.user.username }}</li>
+                        <li>Email: {{ profile.user.email }}</li>
+                        <li>First name:  {{ profile.user.first_name }}</li>
+                        <li>Last name: {{ profile.user.last_name }}</li>
+                    </ul>
+                </td>
+            </tr>
+            </table>
+    {% endif %}
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

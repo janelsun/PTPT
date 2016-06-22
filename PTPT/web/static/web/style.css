@@ -1,0 +1,230 @@
+body {
+    font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    font-family: 'Agency FB', arial;
+    font-size: 40px;
+    color: #382000;
+}
+
+
+/*Header*/
+.header {
+    width: 75%;
+    height: 180px;
+    margin: auto;
+    background: url("images/header_bg.png") no-repeat center;
+}
+
+
+.header ul {
+    list-style-type:none;
+    margin: 0px;
+    padding:0px;
+}
+
+.header li{
+    margin:20px 30px 20px 0px;
+    display:inline;
+    padding:5px;
+    float:right;
+}
+
+.header li:last-child {
+    border:solid black;
+}
+
+
+.header li a {
+    color:black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: x-large;
+}
+
+.header img {
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+/*FOOTER*/
+
+.footer {
+    width:75%;
+    margin: auto;
+    background-image: url('images/footer.png');
+    height: 90px;
+}
+
+.footer ul {
+    list-style-type:none;
+    margin-left:55px;
+    padding: 26px 15px;
+}
+
+.footer li{
+    display:inline;
+    padding:15px;
+}
+
+.footer li a {
+    color:black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: x-large;
+    font-family: 'Agency FB', arial;
+}
+
+
+/*INDEX PAGE*/
+.search_modules_index {
+    margin: auto;
+    width: 75%;
+    height: 430px;
+    background: url('images/search_bg.png') no-repeat center;
+}
+
+
+.popular_mods, .join_community {
+    width: 75%;
+    margin:auto;
+}
+
+.popular_mods ul {
+    list-style-type: none;
+}
+
+.popular_mods li{
+    display: inline;
+    padding: 12px 12px 12px 0px;
+}
+
+.join_community {
+    background: url('images/betutor_bg.png') no-repeat bottom;
+    height: 480px;
+}
+
+.join_community a {
+    margin-left: 372.5px;
+}
+
+
+/*SIGN UP/LOG IN/LOG OUT PAGES*/
+
+form{
+    width: 350px;
+    border: solid #382000;
+    margin: auto;
+    font-size: x-large;
+    padding: 20px 60px 20px 60px;
+}
+
+.createbtn {
+    background-image: url('images/create_btn.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100px;
+    height: 55px;
+    border: none;
+    text-indent: -999em;
+    margin-left: 120px;
+}
+
+.login_btn {
+    background-image: url('images/login_btn.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100px;
+    height: 55px;
+    border: none;
+    text-indent: -999em;
+    margin-left: 120px;
+}
+
+.save_btn {
+    background-image: url('images/save_btn.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100px;
+    height: 55px;
+    border: none;
+    text-indent: -999em;
+    margin-left: 10px;
+}
+
+.cancel_btn {
+    background-image: url('images/cancel_btn.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100px;
+    height: 55px;
+    border: none;
+    text-indent: -999em;
+    margin-left: 10px;
+}
+
+.join_btn {
+    background-image: url('images/join_btn.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 100px;
+    height: 55px;
+    border: none;
+    text-indent: -999em;
+    margin-left: 220px;
+}
+
+.logout, .login, .signup, .signup_thanks, .profile_page,.view_profile{
+    background: url('images/mainbg.png') center no-repeat;
+    height: 600px;
+}
+
+.profile_page ul{
+    list-style-type: circle;
+    margin-left: 500px;
+}
+
+.profile_page a{
+    color: #382000;
+    font-size: xx-large;
+}
+
+.profile_page li{
+    padding: 10px;
+}
+
+.profile_page form {
+    width: 650px;
+}
+.view_profile table{
+    width: 60%;
+    margin: auto;
+}
+
+.view_profile ul{
+    list-style-type: none;
+    padding: 0px;
+}
+
+.view_profile li{
+    font-size: xx-large;
+    padding: 5px;
+}
+
+.back_btn {
+    margin-left: 220px;
+}
+
+.join_tutor form {
+    width: 750px;
+}
+
+.join_tutor {
+    background: url('images/mainbg.png') center;
+    height: 1200px;
+    width: 75%;
+    margin: auto;
+}

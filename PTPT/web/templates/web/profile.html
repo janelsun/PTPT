@@ -1,0 +1,31 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My account{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="profile_page">
+    <br><br>
+        {% if user %}
+        <h1>Welcome back {{ user.username }}!</h1>
+        <br>
+        <h1>Here's the list of activities you can explore:</h1>
+        <br>
+        <ul>
+            <li><a href="{% url 'view_profile' %}">View my profile</a></li>
+            <li><a href="{% url 'edit_profile' %}">Edit my profile</a></li>
+            <li><a href="{% url 'verify_student' %}">Verify my account</a> </li>
+            <li><a href="{% url 'join-tutor' %}">Join us as a tutor</a> </li>
+            <li><a href="">Register a module</a> </li>
+        </ul>
+    {% endif %}
+    </div>
+
+{% endblock %}
+
+</body>
+</html>

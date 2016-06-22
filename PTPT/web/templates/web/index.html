@@ -1,0 +1,36 @@
+{% extends 'web/base.html' %}
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome to PTPT!{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+
+    <!--SEARCHING SECTION-->
+    <div class="search_modules_index">
+    </div>
+
+    <!--POPULAR MODULES-->
+    <br>
+    <div class="popular_mods">
+    <h1>Our Popular Modules...</h1>
+        <ul>
+            <li><a href="#"><img src="{% static 'web/images/CS1010S.png'%}"></a></li>
+            <li><a href="#"><img src="{% static 'web/images/MA1101R.png' %}"></a></li>
+            <li><a href="#"><img src="{% static 'web/images/EC1301.png' %}"></a></li>
+        </ul>
+    </div>
+
+    <br>
+    <div class="join_community">
+    <h1>Join Our Community</h1>
+        <br><br><br><br><br><br><br><br><br><br>
+    <a href="#"><img src="{% static 'web/images/betutor_btn.png' %}"></a>
+    </div>
+
+{% endblock %}
+</body>
+</html>

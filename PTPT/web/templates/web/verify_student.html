@@ -1,0 +1,32 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Edit my profile{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="profile_page">
+    <br><br>
+        {% if profile %}
+            <a href="{% url 'profile' %}"><img class="back_btn" src="{% static 'web/images/back_btn.png' %}"></a><br>
+        <h1>Verify my account</h1>
+        <br>
+            <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+                <p>**Please upload a copy of your NUS Matriculation card for verification of identity. Information collected will only be used by the administration of PTPT
+                    and will not be released to third party. After verification is done, we will send a notification email to your email address. You can start to book tuition afterwards. Thanks.</p>
+            Upload here:
+                <input type="file" name="matric_photo" value="{{ profile.matric_photo }}"><br><br>
+
+                <input class="save_btn" type="submit" value="Save Changes" name="save" />
+                <input class="cancel_btn" type="reset" value="Cancel" name="cancel" />
+            </form>
+    </div>
+{% endif%}
+{% endblock %}
+
+</body>
+</html>
