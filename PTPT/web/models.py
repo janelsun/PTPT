@@ -124,4 +124,17 @@ class tutor_form(forms.ModelForm):
             'description': Textarea(attrs={'cols':100})
         }
 
+class Module(models.Models):
+	mod_code = models.CharField(max_length=10, blank = False, default='')
+	mod_name = modelf.CharField(max_length=30, blank = False, default='')
 
+class tutor_mod(models.Model):
+	mod_code = models.ForeignKey(Module, blank=False, unique=True, on_delete=models.CASCADE)
+	user = models.ForeignKey(User,blank=False,unique=True,verbose_name='user', on_delete=models.CASCADE)
+	grde = models.CharField(max_length=5, choices=grade_choices, blank=False, default="")
+	ave_rating = models.CharField(max_length=3)
+	is_certified_tutor = models.NullBooleanField(blank=True, default="Null")
+	transcript_photo = models.ImageField(upload_to='transcript_photo/',max_length=100, blank=True, default='Null')
+	semester_taken= models.CharField(max_length=10, choices=semester_chices, blank=False, default="")
+	year_taken = models.CharField(max_length=4, blank=False, default='') 
+	review = models.CharField(max_length=400)
