@@ -61,6 +61,23 @@ faculty_choices = [('arts and social sciences','Arts and Social Sciences'),
                    ('music','Music'),
                    ('yale-nus','Yale-NUS'),
                    ]
+                   
+grade_choices = [("a+", "A+"), 
+		 ("a","A"), 
+		 ("a-","A-"), 
+		 ("b+","B+"), 
+		 ("b","B"), 
+		 ("b-","B-"),
+		 ("c+", "C+"),
+		 ("c", "C"),
+		 ("d+", "D+"),
+		 ("d", "D"),
+		 ("f", "F"),
+		 ]
+
+semester_choices = [('sem1', "Semester 1"),
+	            ('sem2', 'Semester 2"),
+	            ]
 
 
 class Tutee(models.Model):
