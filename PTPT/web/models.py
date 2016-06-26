@@ -150,7 +150,7 @@ class tutor_mod(models.Model):
 	user = models.ForeignKey(User,blank=False,unique=True,verbose_name='user', on_delete=models.CASCADE)
 	grade = models.CharField(max_length=5, choices=grade_choices, blank=False, default="")
 	ave_rating = models.CharField(max_length=3)
-	is_certified_tutor = models.NullBooleanField(blank=True, default="Null")
+	is_certified_tutor = models.NullBooleanField(blank=False, default="Null")
 	transcript_photo = models.ImageField(upload_to='transcript_photo/',max_length=100, blank=True, default='Null')
 	semester_taken= models.CharField(max_length=10, choices=semester_chices, blank=False, default="")
 	year_taken = models.CharField(max_length=4, blank=False, default='') 
