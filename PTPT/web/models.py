@@ -142,11 +142,11 @@ class tutor_form(forms.ModelForm):
         }
 
 class Module(models.Models):
-	mod_code = models.CharField(max_length=10, blank = False, default='')
+	mod_code = models.CharField(max_length=10, blank = False, primary_key=True)
 	mod_name = models.CharField(max_length=30, blank = False, default='')
 
 class tutor_mod(models.Model):
-	mod_code = models.ForeignKey(Module, blank=False, unique=True, on_delete=models.CASCADE)
+	mod_code = models.ForeignKey(Module, blank=False, verbose_name='module code', on_delete=models.CASCADE)
 	user = models.ForeignKey(User,blank=False,unique=True,verbose_name='user', on_delete=models.CASCADE)
 	grade = models.CharField(max_length=5, choices=grade_choices, blank=False, default="")
 	ave_rating = models.CharField(max_length=3)
@@ -154,4 +154,4 @@ class tutor_mod(models.Model):
 	transcript_photo = models.ImageField(upload_to='transcript_photo/',max_length=100, blank=True, default='Null')
 	semester_taken= models.CharField(max_length=10, choices=semester_chices, blank=False, default="")
 	year_taken = models.CharField(max_length=4, blank=False, default='') 
-	review = models.CharField(max_length=400)
+	review = models.CharField(max_length=10000)
