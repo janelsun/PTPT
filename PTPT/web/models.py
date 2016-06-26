@@ -147,7 +147,7 @@ class Module(models.Models):
 
 class tutor_mod(models.Model):
 	mod_code = models.ForeignKey(Module, blank=False, verbose_name='module code', on_delete=models.CASCADE)
-	user = models.ForeignKey(User,blank=False,unique=True,verbose_name='user', on_delete=models.CASCADE)
+	tutor = models.ForeignKey(tutor, blank=False, on_delete=models.CASCADE)
 	grade = models.CharField(max_length=5, choices=grade_choices, blank=False, default="")
 	ave_rating = models.CharField(max_length=3)
 	is_certified_tutor = models.NullBooleanField(blank=False, default="Null")
