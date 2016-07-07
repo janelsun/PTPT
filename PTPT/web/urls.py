@@ -15,4 +15,7 @@ urlpatterns = [
     url(r'^accounts/verify-student/$',views.verify_student,name='verify_student'),
     url(r'^accounts/join-tutor/$',views.join_tutor_form,name='join-tutor'),
     url(r'^accounts/join-tutor/thanks/$',views.join_tutor_thanks),
+    url(r'^advanced-search/$', views.advanced_search, name='advanced_search'),
+    url(r'^advanced-search/results/$', views.adv_search_results, name='adv_search_results'),
+
     ]
