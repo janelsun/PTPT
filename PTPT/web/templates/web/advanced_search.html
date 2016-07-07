@@ -1,0 +1,28 @@
+{% extends 'web/base.html' %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Advanced Search{% endblock %}</title>
+</head>
+<body>
+{% block content %}
+    <div class="signup">
+    <br><br>
+    <h1>Search for your preferred tutor</h1>
+        <br>
+	<p style="text-align:center;">Still can't find a suitable tutor?<br> 
+	No worries! <br>
+	Fill up the advanced searching form below and we will do the matching for you :)</p> 
+    <form action="/adv_search_results/" method="get">
+    {{ form.as_p}}
+	<br>
+    <input class="btn" type="submit" value="Search">
+    </form>
+    </div>
+
+{% endblock %}
+
+</body>
+</html>
