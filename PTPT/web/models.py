@@ -159,20 +159,4 @@ class tutor_mod(models.Model):
 class adv_search_form(forms.ModelForm):
     class Meta:
         model = tutor_mod
-        exclude = ['tutor','title','transcript_photo','review','is_certified_tutor']
-        labels ={
-            'mod_code':_('Module Code:'),
-            'grade':_('Grade'),
-            'semester_taken':_('Semester Taken'),
-            'year_taken':_('Year Taken'),
-            'ave_rating':_('Average Rating'),
-        }
-    class Meta:
-        model = tutor
-        exclude = ['user','major','description']
-        labels = {
-            'faculty':_('Faculty'),
-            'preferred_tuition_type':_('Preferred Tuition Type'),
-            'preferred_schedule':_('Preferred Schedule'),
-            'year_of_study':_('Year of Study'),
-        }
+        fields = ['mod_code','grade','semester_taken','year_taken','ave_rating']
