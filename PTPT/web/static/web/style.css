@@ -228,3 +228,10 @@ form{
     width: 75%;
     margin: auto;
 }
+
+.adv_search form {
+    width: 550px;
+    border: solid #382000;
+    font-size: large;
+    padding: 10px 60px 10px 40px;
+}
