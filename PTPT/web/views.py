@@ -97,3 +97,12 @@ def join_tutor_thanks(request):
 def advanced_search(request):
     form = adv_search_form(request.POST or None)
 	return render(request, 'web/adv_search_results.html')
+	
+def search_modules(request):
+    if 'module_code' in request.GET and request.GET['module_code']:
+        module_code = request.GET['module_code']
+        tutor = tutor_mod.objects.filter(mod_code__icontains=module_code)
+        return render(request, 'module_search_results.html',
+            {'tutor':tutor, 'query': module_code})
+    else:
+        return httpResponse("Sorry there is no matching tutor.")
