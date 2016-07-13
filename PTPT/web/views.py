@@ -95,7 +95,7 @@ def join_tutor_thanks(request):
     return render(request,'web/join_tutor_thanks.html')
     
 def advanced_search(request):
-    form = adv_search_form(request.POST or None)
+    form = adv_search_form(request.GET or None)
 	return render(request, 'web/adv_search_results.html')
 	
 def search_modules(request):
