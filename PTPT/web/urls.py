@@ -17,5 +17,6 @@ urlpatterns = [
     url(r'^accounts/join-tutor/thanks/$',views.join_tutor_thanks),
     url(r'^advanced-search/$', views.advanced_search, name='advanced_search'),
 #    url(r'^advanced-search/results/$', views.adv_search_results, name='adv_search_results'),
+    url(r'^search_modules/$', views.search_modules, name='search_modules'),
 
     ]
