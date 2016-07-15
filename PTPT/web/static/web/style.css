@@ -87,6 +87,41 @@ h1 {
     background: url('images/search_bg.png') no-repeat center;
 }
 
+.search_modules_index input[type=text], select{
+	width:600px;
+	height: 50px;
+	padding: 15px 20px;
+	margin: 10px 5px;
+	display: inline-block;
+	border: none;
+	box-sizing: border-box;
+}
+
+.search_modules_index input[type=submit]{
+	width:100px;
+	height: 50px;
+	background-color: #f1b300;
+	color: black;
+	padding: 10px 16px;
+	margin 50px 0;
+	border:none;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.search_modules_index input[type=submit]:hover {
+	background-color: #f1bb00;
+}
+
+.search_modules_index form{
+	text-align:center;
+	width: 100%;
+	border: none;
+	margin: auto;
+	font-size: x-large;
+	padding: 180px 30px 20px 0px;
+}
+
 
 .popular_mods, .join_community {
     width: 75%;
@@ -229,6 +264,10 @@ form{
     margin: auto;
 }
 
+.adv_search{
+    background: url('images/mainbg.png') center no-repeat;
+    height: 900px;
+}
 .adv_search form {
     width: 550px;
     border: solid #382000;
