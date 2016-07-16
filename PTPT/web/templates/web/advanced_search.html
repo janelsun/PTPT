@@ -16,7 +16,7 @@
 	No worries! <br>
 	Fill up the advanced searching form below and we will do the matching for you :)</p></div>
     <div class="adv_search">
-    <form action="" method="get">
+    <form action="/results/" method="get">
         {% csrf_token %}
         {{ form.as_p }}
     <input class="btn" type="submit" value="Search">
