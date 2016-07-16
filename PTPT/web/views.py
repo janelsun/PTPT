@@ -94,10 +94,22 @@ def join_tutor_form(request):
 def join_tutor_thanks(request):
     return render(request,'web/join_tutor_thanks.html')
     
-def advanced_search(request):
-    form = adv_search_form(request.GET or None)
-	return render(request, 'web/adv_search_results.html')
-	
+def adv_search(request):
+    if request.method == 'GET':
+        form = adv_search_form(request.GET)
+        if form.is_valid():
+            return HttpResponseRedirect('/web/advanced_search/results')
+    return render(request, 'web/adv_search.html', {'form':form})
+
+#view of results page to be completed    
+def adv_search_results(request):
+    instance = get_object_or_404()
+    context ={
+
+    }
+    return render(request, "web/adv_search_results.html", context)
+################
+
 def search_modules(request):
     if 'module_code' in request.GET and request.GET['module_code']:
         module_code = request.GET['module_code']
