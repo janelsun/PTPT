@@ -159,4 +159,4 @@ class tutor_mod(models.Model):
 class adv_search_form(forms.ModelForm):
     class Meta:
         model = tutor_mod
-        fields = ['mod_code','grade','semester_taken','year_taken','ave_rating']
+        fields = ['mod_code','grade','semester_taken','year_taken',]
